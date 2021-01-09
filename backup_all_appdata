@@ -28,7 +28,7 @@ do
 
     if echo $cRunning | grep -iqF $name; then
     echo "Stopping $name"
-        docker stop -t 60 "$name"
+        docker stop -t 180 "$name"
         cd ""$backupDirectory""$now""
         tar cWfC "./$name.tar" "$(dirname "$path")" "$(basename "$path")"
     echo "Starting $name"
